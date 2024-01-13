@@ -1,26 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <MenuHeader/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MenuHeader from './components/MenuHeader.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    MenuHeader
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Inter', sans-serif;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+
+body {
+  background-color: #101010;
 }
 </style>
