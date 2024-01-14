@@ -1,6 +1,6 @@
 <template>
     <div id="inputContainer">
-        <input type="text" id="taskInput" placeholder="Add New Task..." v-model="taskText" @input="checkCharacterLimit" maxlength="30"/>
+        <input type="text" id="taskInput" placeholder="Add New Task..." v-model="taskText" @keyup.enter="addTask" @input="checkCharacterLimit" maxlength="30"/>
         <button class="addTask" @click="addTask">Add</button>
     </div>
 </template>
@@ -14,8 +14,10 @@ export default {
   },
   methods: {
     addTask() {
-      this.$emit("add-task", this.taskText);
-      this.taskText = ""; // Limpa o input após adicionar a tarefa
+      if (this.taskText.trim() !== "") {
+        this.$emit("add-task", this.taskText);
+        this.taskText = ""; 
+      }
     }
   }
 };
