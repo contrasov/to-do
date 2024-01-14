@@ -16,6 +16,7 @@
 
 <script>
 
+
 </script>
 
 <style>
@@ -27,6 +28,10 @@
     color: #7A7A7A;
 }
 
+#title h2 {
+    font-size: 18px;
+}
+
 #menu {
     display: flex;
     justify-content: center; /*centralizar*/
@@ -34,11 +39,6 @@
     vertical-align: middle; /*alinhar horizontal*/
     gap: 15%;
     width: 600px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /*manter no centro*/
-    margin-top: -200px;
 }
 
 #menuOptions {
@@ -48,8 +48,8 @@
 
 .buttonMenu {
     cursor: pointer;
-    padding: 8px 30px;
-    border-radius: 12px;
+    padding: 8px 24px;
+    border-radius: 15px;
     background: #292929;
     border: transparent;
     color: #7A7A7A;
